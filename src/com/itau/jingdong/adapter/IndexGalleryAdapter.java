@@ -15,10 +15,10 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 
 public class IndexGalleryAdapter extends BaseAdapter {
 
-	Context context;
-	int layoutId;
-	int to[];
-	List<IndexGalleryItemData> listData;
+	private Context context;
+	private int layoutId;
+	private int to[];
+	private List<IndexGalleryItemData> listData;
 
 	public IndexGalleryAdapter(Context context, int layoutId,
 			List<IndexGalleryItemData> listData, int to[]) {
@@ -30,25 +30,25 @@ public class IndexGalleryAdapter extends BaseAdapter {
 
 	@Override
 	public int getCount() {
-		// TODO Auto-generated method stub
+
 		return listData.size() == 0 ? 0 : listData.size();
 	}
 
 	@Override
 	public Object getItem(int position) {
-		// TODO Auto-generated method stub
+
 		return listData.get(position);
 	}
 
 	@Override
 	public long getItemId(int position) {
-		// TODO Auto-generated method stub
+
 		return position;
 	}
 
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
-		// TODO Auto-generated method stub
+
 		ViewHolder viewHolder;
 		final int pos = position;
 		if (convertView == null) {
